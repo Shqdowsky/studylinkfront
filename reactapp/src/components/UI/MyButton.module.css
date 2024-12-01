@@ -1,0 +1,13 @@
+.myButton {
+    margin: auto;
+    padding: 0.6vw 1vw;
+    color: #000;
+    font-size: 1.2vw;
+    background: transparent;
+    border: 0.2vw solid #9da7eb;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.myButton:hover{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.411);
+}

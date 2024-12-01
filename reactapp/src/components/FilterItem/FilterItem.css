@@ -1,0 +1,40 @@
+.filter-Item{
+    display: flex;
+    flex-direction: column; /* Если нужно вертикальное размещение */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px;
+}
+
+.filter-Item:hover .filter-Item__hover{
+    width: 100%;
+}
+
+.filter-Item:not(:last-child){
+    margin-bottom: 0.9vw;
+}
+
+.filter-Item-body{
+    display: inline-block;
+}
+
+.filter-Item__title{
+    font-size: 1.3vw;
+}
+
+.filter-Item__hover{
+    transition: width 0.2s linear;
+    width: 0%;
+    height: 0.15vw;
+    background-color: #4a517155;
+}
+
+.filter-Item{
+    cursor: pointer;
+}
+
+@media(max-width: 480px){
+    .filter-Item{
+        padding: 0;
+    }
+}
