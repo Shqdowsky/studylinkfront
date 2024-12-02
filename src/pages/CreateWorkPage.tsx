@@ -19,27 +19,25 @@ const CreateWorkPage = () => {
     const handleCreate = async () => {
         const formData = new FormData();
 
-        // Добавляем текстовые данные
         formData.append("title", workBody.title);
         formData.append("body", workBody.body);
         formData.append("predmet", selectedSubject);
 
-        // Добавляем файлы
         if (selectedFiles) {
             Array.from(selectedFiles).forEach((file) => formData.append("document", file));
         }
 
-        // Отправляем данные
-        const response = await createWork(formData);
-        setResponseId(response.data._id);
-        console.log(response.data._id);
-        setWorkBody({ title: "", body: "", category: "" });
-        setOpen(true);
-        return responseId
+        try{
+            const response = await createWork(formData);
+            setResponseId(response.data._id);
+            setWorkBody({ title: "", body: "", category: "" });
+            setOpen(true);
+            return responseId
+        } catch(e){
+        }
     }
 
     const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
-    console.log(selectedFiles)
     return (
         <FileContext.Provider value={{
             selectedFiles,

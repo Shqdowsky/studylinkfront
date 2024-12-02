@@ -46,7 +46,7 @@ const CategoryWorksPage: React.FC<WorksPageProps> = ({searchQuery}) => {
                                 <WorksList sortedWorks={sortedWorks} />
                             </div>
                         }
-                        {categoryWorks?.length == 0 && <div style={{textAlign: 'center'}}>Поки нема робіт по цьому предмету :/</div>}
+                        {categoryWorks?.length == 0 && <div className='emptyposts'>Поки нема робіт по цьому предмету :/</div>}
                     </div>
                 </div>
             </div>

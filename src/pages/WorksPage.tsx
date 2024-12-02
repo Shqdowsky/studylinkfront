@@ -37,9 +37,12 @@ const WorksPage: React.FC<WorksPageProps> = ({searchQuery}) => {
                                 : <FilterItem onClick={(category) => router(`/works`)} filter={category}/>)}
                             </div>
                         </div>
-                        <div className='works-page-content__works-scroll'>
-                            <WorksList sortedWorks={sortedWorks}/>
-                        </div>
+                        {sortedWorks && sortedWorks?.length > 0 &&
+                            <div className='works-page-content__works-scroll'>
+                                <WorksList sortedWorks={sortedWorks} />
+                            </div>
+                        }
+                        {sortedWorks?.length == 0 && <div className='emptyposts'>Поки нема робіт :/</div>}
                     </div>
                 </div>
             </div>
