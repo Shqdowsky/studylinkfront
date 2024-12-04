@@ -1,6 +1,6 @@
 .filter-Item{
     display: flex;
-    flex-direction: column; /* Если нужно вертикальное размещение */
+    flex-direction: column; 
     align-items: flex-start;
     justify-content: center;
     padding: 5px;

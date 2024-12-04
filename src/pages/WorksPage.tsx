@@ -14,7 +14,6 @@ interface WorksPageProps{
 const WorksPage: React.FC<WorksPageProps> = ({searchQuery}) => {
     
     const {data: works, error, isLoading} = postApi.useFetchAllWorksQuery(10);
-    console.log(works)
     let sortedWorks = works ? works : []
     const router = useNavigate()
     sortedWorks = useFilterWorks(sortedWorks, searchQuery);

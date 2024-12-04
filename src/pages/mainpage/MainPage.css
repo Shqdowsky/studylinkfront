@@ -80,7 +80,6 @@ header {
     }
 }
 
-/* Основной контент */
 .main-body {
     flex: 1 1 auto;
     padding: 2.5vw 0;
