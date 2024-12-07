@@ -27,18 +27,18 @@ type WorkIdPageParams = {
             case 'pptx':
                 return pptxIcon;
             default:
-                return `http://localhost:5000/${filename}`;
+                return `https://studylink.website/api/${filename}`;
         }
     };
 
     const handleImageClick = (imageUrl: string) => {
         setPopupImage(imageUrl);
-        document.body.style.overflow = 'hidden'; // Отключение прокрутки основной страницы
+        document.body.style.overflow = 'hidden';
     };
 
     const closePopup = () => {
         setPopupImage(null);
-        document.body.style.overflow = ''; // Включение прокрутки основной страницы
+        document.body.style.overflow = '';
     };
 
     return (
@@ -53,7 +53,7 @@ type WorkIdPageParams = {
                     {work?.document && work.document.length > 0 && (
                         <div className="file-container">
                             {work.document.map((file, index) => {
-                                const fileUrl = `http://localhost:5000/${file}`;
+                                const fileUrl = `https://studylink.website/api/${file}`;
                                 const fileExtension = file.toString().split('.').pop()?.toLowerCase();
 
                                 return (

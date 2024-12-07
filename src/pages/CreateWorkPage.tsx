@@ -55,7 +55,7 @@ const CreateWorkPage = () => {
                         <SelectItem/>
                         <FileInput/>
                         <MyButton onClick={handleCreate}>Створити</MyButton>
-                        { !error && <Popup open={open} onClose={() => setOpen(false)} link={`http://localhost:3000/works/${responseId}`}/> }
+                        { !error && <Popup open={open} onClose={() => setOpen(false)} link={`https://studylink.website/works${responseId}`}/> }
                     </div>
                 </div>
             </div>

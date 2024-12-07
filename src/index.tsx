@@ -16,7 +16,7 @@ const store = setUpStore()
 
 root.render(
   <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
         <App />
       </BrowserRouter>
   </Provider>

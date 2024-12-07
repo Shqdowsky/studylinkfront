@@ -1,5 +1,6 @@
 import React from 'react';
 import "./MainPage.css"
+import { Link } from 'react-router-dom';
 
 function MainPage() {
   return (
@@ -7,7 +8,7 @@ function MainPage() {
         <header>
             <div className="header__content">
                 <h1 className="title">Study Link</h1>
-                <a href="http://localhost:3000/works" className="app-button">Запустити додаток</a>
+                <Link to="/works" className="app-button">Запустити додаток</Link>
             </div>
         </header>
         <div className="main-body">
@@ -16,9 +17,9 @@ function MainPage() {
                     <div className="main-body-content__text">
                         <h3>Ласкаво просимо до StudyLink</h3>
                         <p>StudyLink — це платформа, де студенти/учні можуть завантажувати та ділитися своїми навчальними матеріалами.
- Зареєстровані студенти можуть завантажити матеріали для підтримки свого навчального процесу.</p>
+ Всі студенти можуть завантажити матеріали для підтримки свого навчального процесу.</p>
                         <div className="main-body-content__link main-body-content-link">
-                            <a href="http://localhost:3000/works" className="main-body-content-link__text">Розпочати</a>
+                            <Link to="/works" className="main-body-content-link__text">Розпочати</Link>
                             <img src="images/svg/arrow-right.svg"/>
                         </div>
                     </div>

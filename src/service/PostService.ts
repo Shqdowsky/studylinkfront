@@ -5,7 +5,7 @@ import { IWork } from '../components/models/IWork'
 export const postApi = createApi({
     reducerPath: 'postApi',
     tagTypes: ['Post'],
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://studylink.website/api'}),
     endpoints: (build) => ({
         fetchAllWorks: build.query<IWork[], number>({
             query: (limit=10) => ({
